@@ -19,7 +19,7 @@ url = "https://nominatim.openstreetmap.org/reverse?format=geojson&lat=lat_hold&l
 url = url.replace("lat_hold", lat)
 url = url.replace("lon_hold", lon)
 
-uh = urllib.request.urlopen("https://nominatim.openstreetmap.org/reverse?format=geojson&lat=44.50155&lon=11.33989", context=ctx)
+uh = urllib.request.urlopen(url, context=ctx)
 data = uh.read()
 js = json.loads(data)
 print(json.dumps(js, indent = 4,  sort_keys = True))
