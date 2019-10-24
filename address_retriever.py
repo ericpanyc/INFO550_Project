@@ -18,7 +18,7 @@ def creat_geo_list(lati_given, longi_given, geometry_lst):
     left_longi_str = longi_str.split('.')[0]
     right_longi_str = longi_str.split('.')[1]
 
-    for lati in range(int(right_lati_str)-50000, int(right_lati_str)+50000, 10000):
+    for lati in range(int(right_lati_str)-20000, int(right_lati_str)+80000, 10000):
         for longi in range(int(right_longi_str)-50000, int(right_longi_str)+50000, 10000):
             lati_float = float(left_lati_str+'.'+str(lati))
             longi_float = float(left_longi_str+'.'+str(longi))
